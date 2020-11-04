@@ -15,12 +15,15 @@ bool IsArmstrong(int num)
 
 int main()
 {
-    for (int i = 0; i < 100000; i++)
+    int i = 0;
+    std::cin >> i;
+    if (IsArmstrong(i))
     {
-        if (IsArmstrong(i))
-        {
-            std::cout << i << " \n";
-        }
+        std::cout << i << " is an Armstrong Number\n";
+    }
+    else
+    {
+        std::cout << i << " is not an Armstrong Number\n";
     }
     system("pause");
 }
