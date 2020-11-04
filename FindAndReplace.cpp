@@ -4,7 +4,7 @@
 std::string FindAndReplace(std::string original, std::string replace, std::string with)
 {
     std::size_t location = original.find(replace);
-    while (location != std::string::npos && location < original.size())
+    while (location != std::string::npos)
     {
         original.replace(location, replace.size(), with);
         location = original.find(replace);
@@ -14,5 +14,5 @@ std::string FindAndReplace(std::string original, std::string replace, std::strin
 
 int main()
 {
-    std::cout << FindAndReplace("I am palapapa", "palapapa", "Anson");
+    std::cout << FindAndReplace("I am palapapa", "a", "Anson");
 }
